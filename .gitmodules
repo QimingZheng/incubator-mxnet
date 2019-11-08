@@ -26,3 +26,6 @@
 [submodule "3rdparty/nvidia_cub"]
 	path = 3rdparty/nvidia_cub
 	url = https://github.com/NVlabs/cub.git
+[submodule "src/hybridized_kvstore"]
+	path = src/hybridized_kvstore
+	url = https://github.com/QimingZheng/hybridized_kvstore.git
