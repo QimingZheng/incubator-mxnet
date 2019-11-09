@@ -26,13 +26,17 @@
 #include <stdlib.h>
 #include <dmlc/logging.h>
 #include "./kvstore_local.h"
+#include "../hybridized_kvstore/hykvstore_local.h"
 
 #if MXNET_USE_DIST_KVSTORE
 #include "./kvstore_dist.h"
+#include "../hybridized_kvstore/hykvstore_dist.h"
 std::atomic<int> mxnet::kvstore::KVStoreDist::customer_id_{0};
+std::atomic<int> mxnet::kvstore::HY_KVStoreDist::customer_id_{0};
 #endif  // MXNET_USE_DIST_KVSTORE
 #if MXNET_USE_NCCL
 #include "./kvstore_nccl.h"
+#include "../hybridized_kvstore/hykvstore_nccl.h"
 #endif  // MXNET_USE_NCCL
 
 namespace mxnet {
@@ -49,27 +53,54 @@ KVStore* KVStore::Create(const char *type_name) {
     use_device_comm = true;
   }
 
-  if (has("dist")) {
+  if (has("hybridized")){
+    if (has("dist")) {
 #if MXNET_USE_DIST_KVSTORE
-    kv = new kvstore::KVStoreDist(use_device_comm);
-    if (!has("_async") && kv->IsWorkerNode() && kv->get_rank() == 0) {
-      // configure the server to be the sync mode
-      kv->SendCommandToServers(static_cast<int>(kvstore::CommandType::kSyncMode), "");
-    }
+      kv = new kvstore::HY_KVStoreDist(use_device_comm);
+      if (!has("_async") && kv->IsWorkerNode() && kv->get_rank() == 0) {
+        // configure the server to be the sync mode
+        kv->SendCommandToServers(static_cast<int>(kvstore::CommandType::kSyncMode), "");
+      }
 #else
-    LOG(FATAL) << "compile with USE_DIST_KVSTORE=1 to use " << tname;
-    return nullptr;
-#endif  // MXNET_USE_DIST_KVSTORE
-  } else {
-    if (has("nccl")) {
-#if MXNET_USE_NCCL
-      kv = new kvstore::KVStoreNCCL();
-#else
-      LOG(FATAL) << "compile with USE_NCCL=1 to use " << tname;
+      LOG(FATAL) << "compile with USE_DIST_KVSTORE=1 to use " << tname;
       return nullptr;
-#endif
+#endif  // MXNET_USE_DIST_KVSTORE
     } else {
-      kv =  new kvstore::KVStoreLocal(use_device_comm);
+      if (has("nccl")) {
+#if MXNET_USE_NCCL
+        kv = new kvstore::HY_KVStoreNCCL();
+#else
+        LOG(FATAL) << "compile with USE_NCCL=1 to use " << tname;
+        return nullptr;
+#endif
+      } else {
+        kv =  new kvstore::HY_KVStoreLocal(use_device_comm);
+      }
+    }
+  }
+  else{
+    if (has("dist")) {
+#if MXNET_USE_DIST_KVSTORE
+      kv = new kvstore::KVStoreDist(use_device_comm);
+      if (!has("_async") && kv->IsWorkerNode() && kv->get_rank() == 0) {
+        // configure the server to be the sync mode
+        kv->SendCommandToServers(static_cast<int>(kvstore::CommandType::kSyncMode), "");
+      }
+#else
+      LOG(FATAL) << "compile with USE_DIST_KVSTORE=1 to use " << tname;
+      return nullptr;
+#endif  // MXNET_USE_DIST_KVSTORE
+    } else {
+      if (has("nccl")) {
+#if MXNET_USE_NCCL
+        kv = new kvstore::KVStoreNCCL();
+#else
+        LOG(FATAL) << "compile with USE_NCCL=1 to use " << tname;
+        return nullptr;
+#endif
+      } else {
+        kv =  new kvstore::KVStoreLocal(use_device_comm);
+      }
     }
   }
   kv->type_ = tname;
