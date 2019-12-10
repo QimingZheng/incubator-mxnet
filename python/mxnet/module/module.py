@@ -472,7 +472,8 @@ class Module(BaseModule):
         self._exec_group.reshape(self._data_shapes, self._label_shapes)
 
     def init_optimizer(self, kvstore='local', optimizer='sgd',
-                       optimizer_params=(('learning_rate', 0.01),), force_init=False):
+                       optimizer_params=(('learning_rate', 0.01),), force_init=False,
+                       enable_overlapped_update=False, lazy_updater=None):
         """Installs and initializes optimizers.
 
         Parameters
@@ -540,7 +541,9 @@ class Module(BaseModule):
             if self._compression_params:
                 kvstore.set_gradient_compression(self._compression_params)
             if update_on_kvstore:
-                kvstore.set_optimizer(self._optimizer)
+                kvstore.set_optimizer(self._optimizer, False)
+                if (lazy_updater is not None) and enable_overlapped_update:
+                    kvstore.set_optimizer(lazy_updater, enable_overlapped_update)
             # copy initialized local parameters to kvstore
             _initialize_kvstore(kvstore=kvstore,
                                 param_arrays=self._exec_group.param_arrays,

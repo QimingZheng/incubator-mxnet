@@ -1239,7 +1239,23 @@ void MXKVStoreSetUpdaterImpl(KVStoreHandle handle,
     *local_copy = *local;
     updater_temp(key, recv_copy, local_copy, updater_handle_temp);
   };
-  static_cast<KVStore*>(handle)->set_updater(updt);
+  static_cast<KVStore*>(handle)->set_updater(updt, false);
+}
+
+void MXKVStoreSetLazyUpdaterImpl(KVStoreHandle handle,
+                             MXKVStoreUpdater updater,
+                             void* updater_handle) {
+  MXKVStoreUpdater * updater_temp = updater;
+  void* updater_handle_temp = updater_handle;
+  std::function<void(int, const NDArray&, NDArray*)> updt
+  = [updater_temp, updater_handle_temp](int key, const NDArray& recv, NDArray* local) {
+    NDArray* recv_copy = new NDArray();
+    *recv_copy = recv;
+    NDArray* local_copy = new NDArray();
+    *local_copy = *local;
+    updater_temp(key, recv_copy, local_copy, updater_handle_temp);
+  };
+  static_cast<KVStore*>(handle)->set_updater(updt, true);
 }
 
 int MXKVStoreSetUpdater(KVStoreHandle handle,
@@ -1253,10 +1269,16 @@ int MXKVStoreSetUpdater(KVStoreHandle handle,
 int MXKVStoreSetUpdaterEx(KVStoreHandle handle,
                           MXKVStoreUpdater updater,
                           MXKVStoreStrUpdater str_updater,
-                          void* updater_handle) {
+                          void* updater_handle,
+                          int enable_overlapped_update_flag) {
   API_BEGIN();
-  // set updater with int keys
-  MXKVStoreSetUpdaterImpl(handle, updater, updater_handle);
+  if (enable_overlapped_update_flag){
+    // set updater with int keys
+    MXKVStoreSetLazyUpdaterImpl(handle, updater, updater_handle);
+  } else{
+    // set updater with int keys
+    MXKVStoreSetUpdaterImpl(handle, updater, updater_handle);
+  }
   // set updater with string keys
   MXKVStoreStrUpdater * updater_temp = str_updater;
   void* updater_handle_temp = updater_handle;
@@ -1269,7 +1291,8 @@ int MXKVStoreSetUpdaterEx(KVStoreHandle handle,
     *local_copy = *local;
     updater_temp(key.c_str(), recv_copy, local_copy, updater_handle_temp);
   };
-  static_cast<KVStore*>(handle)->set_updater(updt);
+  if (enable_overlapped_update_flag) static_cast<KVStore*>(handle)->set_updater(updt, true);
+  else static_cast<KVStore*>(handle)->set_updater(updt, false);
   API_END();
 }
 

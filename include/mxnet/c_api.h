@@ -2800,7 +2800,8 @@ MXNET_DLL int MXKVStoreSetUpdater(KVStoreHandle handle,
 MXNET_DLL int MXKVStoreSetUpdaterEx(KVStoreHandle handle,
                                     MXKVStoreUpdater updater,
                                     MXKVStoreStrUpdater str_updater,
-                                    void *updater_handle);
+                                    void *updater_handle,
+                                    int enable_overlapped_update_flag);
 /*!
  * \brief get the type of the kvstore
  * \param handle handle to the KVStore

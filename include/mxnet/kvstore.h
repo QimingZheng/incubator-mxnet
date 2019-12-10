@@ -266,7 +266,7 @@ class KVStore {
    *
    * \param updater user-defined updater, default is assign
    */
-  virtual void set_updater(const Updater& updater) {
+  virtual void set_updater(const Updater& updater, bool is_lazy_updater) {
     CHECK(updater) << "invalid updater";
     updater_ = updater;
   }

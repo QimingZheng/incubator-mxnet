@@ -525,7 +525,7 @@ class KVStore(object):
         else:
             raise Exception('Gradient compression is not supported for this type of kvstore')
 
-    def set_optimizer(self, optimizer):
+    def set_optimizer(self, optimizer, enable_overlapped_update=False):
         """ Registers an optimizer with the kvstore.
 
         When using a single machine, this function updates the local optimizer.
@@ -572,7 +572,7 @@ class KVStore(object):
                 cmd = _get_kvstore_server_command_type('kSetMultiPrecision')
                 self._send_command_to_servers(cmd, '')
         else:
-            self._set_updater(opt.get_updater(optimizer))
+            self._set_updater(opt.get_updater(optimizer), enable_overlapped_update)
 
     @property
     def type(self):
@@ -640,7 +640,7 @@ class KVStore(object):
         assert self._updater is not None, "Cannot load states for distributed training"
         self._updater.set_states(open(fname, 'rb').read())
 
-    def _set_updater(self, updater):
+    def _set_updater(self, updater, enable_overlapped_update=False):
         """Sets a push updater into the store.
 
         This function only changes the local store. When running on multiple machines one must
@@ -677,8 +677,9 @@ class KVStore(object):
         _str_updater_proto = ctypes.CFUNCTYPE(
             None, ctypes.c_char_p, NDArrayHandle, NDArrayHandle, ctypes.c_void_p)
         self._str_updater_func = _str_updater_proto(_updater_wrapper(updater))
+        enable_overlapped_update_flag = ctypes.c_int((1 if enable_overlapped_update else 0))
         check_call(_LIB.MXKVStoreSetUpdaterEx(self.handle, self._updater_func,
-                                              self._str_updater_func, None))
+                                              self._str_updater_func, None, enable_overlapped_update_flag))
 
 
     def _barrier(self):
