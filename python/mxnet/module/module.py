@@ -113,6 +113,7 @@ class Module(BaseModule):
 
         self._compression_params = compression_params
         self._optimizer = None
+        self._lazy_optimizer = None
         self._kvstore = None
         self._update_on_kvstore = None
         self._updater = None
@@ -533,6 +534,7 @@ class Module(BaseModule):
                 optimizer.idx2name = idx2name.copy()
 
         self._optimizer = optimizer
+        self._lazy_optimizer = lazy_updater
         self._kvstore = kvstore
         self._update_on_kvstore = update_on_kvstore
         self._updater = None
@@ -542,8 +544,8 @@ class Module(BaseModule):
                 kvstore.set_gradient_compression(self._compression_params)
             if update_on_kvstore:
                 kvstore.set_optimizer(self._optimizer, False)
-                if (lazy_updater is not None) and enable_overlapped_update:
-                    kvstore.set_optimizer(lazy_updater, enable_overlapped_update)
+                if (self._lazy_optimizer is not None) and enable_overlapped_update:
+                    kvstore.set_optimizer(self._lazy_optimizer, enable_overlapped_update)
             # copy initialized local parameters to kvstore
             _initialize_kvstore(kvstore=kvstore,
                                 param_arrays=self._exec_group.param_arrays,

@@ -38,11 +38,13 @@ class KVStoreServer(object):
         self.kvstore = kvstore
         self.handle = kvstore.handle
         self.init_logginig = False
+        self.uploaded_optimizer_num = 0
 
     def _controller(self):
         """Return the server controller."""
         def server_controller(cmd_id, cmd_body, _):
             """Server controler."""
+            self.uploaded_optimizer_num += 1
             if not self.init_logginig:
                 # the reason put the codes here is because we cannot get
                 # kvstore.rank earlier
@@ -56,7 +58,11 @@ class KVStoreServer(object):
                     optimizer = pickle.loads(cmd_body)
                 except:
                     raise
-                self.kvstore.set_optimizer(optimizer)
+                # self.kvstore.set_optimizer(optimizer)
+                if self.uploaded_optimizer_num > 1:
+                    self.kvstore.set_optimizer(optimizer, True)
+                else:
+                    self.kvstore.set_optimizer(optimizer, False)
             else:
                 print("server %d, unknown command (%d, %s)" % (
                     self.kvstore.rank, cmd_id, cmd_body))

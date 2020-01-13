@@ -75,7 +75,7 @@ class KVStoreDist : public KVStoreLocal {
     }
   }
 
-  void set_updater(const Updater& updater) override {
+  void set_updater(const Updater& updater, bool is_lazy_updater) override {
     CHECK(updater) << "invalid updater";
     if (IsServerNode()) {
       CHECK_NOTNULL(server_)->set_updater(updater);

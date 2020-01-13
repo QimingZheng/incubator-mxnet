@@ -668,18 +668,37 @@ class KVStore(object):
         [[ 6.  6.  6.]
         [ 6.  6.  6.]]
         """
-        self._updater = updater
+        if enable_overlapped_update:
+            self._lazy_updater = updater
+        else:
+            self._updater = updater
         # set updater with int keys
         _updater_proto = ctypes.CFUNCTYPE(
             None, ctypes.c_int, NDArrayHandle, NDArrayHandle, ctypes.c_void_p)
-        self._updater_func = _updater_proto(_updater_wrapper(updater))
+        if enable_overlapped_update:
+            self._lazy_updater_func = _updater_proto(_updater_wrapper(updater))
+        else:
+            self._updater_func = _updater_proto(_updater_wrapper(updater))
         # set updater with str keys
         _str_updater_proto = ctypes.CFUNCTYPE(
             None, ctypes.c_char_p, NDArrayHandle, NDArrayHandle, ctypes.c_void_p)
-        self._str_updater_func = _str_updater_proto(_updater_wrapper(updater))
-        enable_overlapped_update_flag = ctypes.c_int((1 if enable_overlapped_update else 0))
-        check_call(_LIB.MXKVStoreSetUpdaterEx(self.handle, self._updater_func,
-                                              self._str_updater_func, None, enable_overlapped_update_flag))
+        if enable_overlapped_update:
+            self._str_lazy_updater_func = _str_updater_proto(_updater_wrapper(updater))
+        else:
+            self._str_updater_func = _str_updater_proto(_updater_wrapper(updater))
+        enable_overlapped_update_flag = 0
+        if enable_overlapped_update:
+            enable_overlapped_update_flag = ctypes.c_int(1)
+        else:
+            enable_overlapped_update_flag = ctypes.c_int(0)
+        if enable_overlapped_update:
+            check_call(_LIB.MXKVStoreSetUpdaterEx(self.handle, self._lazy_updater_func,
+                                                  self._str_lazy_updater_func, None,
+                                                  enable_overlapped_update_flag))
+        else:
+            check_call(_LIB.MXKVStoreSetUpdaterEx(self.handle, self._updater_func,
+                                                  self._str_updater_func, None,
+                                                  enable_overlapped_update_flag))
 
 
     def _barrier(self):
