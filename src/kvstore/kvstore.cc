@@ -30,6 +30,7 @@
 
 #if MXNET_USE_DIST_KVSTORE
 #include "./kvstore_dist.h"
+#include "../hybridized_kvstore/hykvstore_helper.h"
 #include "../hybridized_kvstore/hykvstore_dist.h"
 std::atomic<int> mxnet::kvstore::KVStoreDist::customer_id_{0};
 std::atomic<int> mxnet::kvstore::HY_KVStoreDist::customer_id_{0};
