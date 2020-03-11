@@ -49,7 +49,7 @@ mxnet_option(USE_SIGNAL_HANDLER   "Print stack traces on segfaults." ON)
 mxnet_option(USE_TENSORRT         "Enable inference optimization with TensorRT." OFF)
 mxnet_option(USE_ASAN             "Enable Clang/GCC ASAN sanitizers." OFF)
 mxnet_option(ENABLE_TESTCOVERAGE  "Enable compilation with test coverage metric output" OFF)
-mxnet_option(USE_INT64_TENSOR_SIZE "Use int64_t to represent the total number of elements in a tensor" OFF)
+mxnet_option(USE_INT64_TENSOR_SIZE "Use int64_t to represent the total number of elements in a tensor" ON)
 mxnet_option(BUILD_CYTHON_MODULES "Build cython modules." OFF)
 
 message(STATUS "CMAKE_CROSSCOMPILING ${CMAKE_CROSSCOMPILING}")
