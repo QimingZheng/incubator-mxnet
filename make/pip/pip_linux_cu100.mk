@@ -54,7 +54,7 @@ USE_BLAS=openblas
 # whether use opencv during compilation
 # you can disable it, however, you will not able to use
 # imbin iterator
-USE_OPENCV = 1
+USE_OPENCV = 0
 # Add OpenCV include path, in which the directory `opencv2` exists
 USE_OPENCV_INC_PATH = NONE
 # Add OpenCV shared library path, in which the shared library exists
@@ -164,6 +164,7 @@ USE_S3 = 1
 # path to folders containing projects specific operators that you don't want to put in src/operators
 EXTRA_OPERATORS =
 
+USE_INT64_TENSOR_SIZE = 1
 
 #----------------------------
 # plugins
