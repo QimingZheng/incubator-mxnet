@@ -50,7 +50,7 @@ fi
 $MAKE DEPS_PATH=$DEPS_PATH
 
 if [[ $PLATFORM == 'linux' ]]; then
-    cp -L /usr/lib/gcc/x86_64-linux-gnu/4.8/libgfortran.so lib/libgfortran.so.3
+    cp -L /usr/lib/gcc/x86_64-linux-gnu/5.4.0/libgfortran.so lib/libgfortran.so.3
     cp -L /usr/lib/x86_64-linux-gnu/libquadmath.so.0 lib/libquadmath.so.0
 fi
 
