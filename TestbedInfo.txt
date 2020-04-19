@@ -1,0 +1,503 @@
+CPLUS_INCLUDE_PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/include:/mnt/lustre/cm/shared/global/src/dev/cudnn/7.4.2/include:/mnt/lustre/cm/shared/global/src/machinelearning/nccl/2.5.6-cuda10.0/include
+SLURM_NODELIST=gqxx-01-084
+SLURM_CHECKPOINT_IMAGE_DIR=/var/slurm/checkpoint
+ANACONDA3_ROOT=/mnt/lustre/cm/shared/global/src/machinelearning/anaconda3/
+SLURM_JOB_NAME=bash
+MANPATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/share/man:/usr/share/man:/usr/local/share/man
+XDG_SESSION_ID=42014
+CUDA_INC_PATH=/mnt/lustre/cm/shared/global/src/dev/cuda/10.1
+HOSTNAME=cu01
+SLURM_NTASKS_PER_NODE=1
+SLURM_TOPOLOGY_ADDR=gqxx-01-084
+SLURMD_NODENAME=gqxx-01-084
+SLURM_PRIO_PROCESS=0
+SLURM_SRUN_COMM_PORT=41823
+TERM=screen
+SHELL=/bin/bash
+HISTSIZE=200000000
+SLURM_PTY_WIN_ROW=30
+SLURM_JOB_QOS=qd7
+SSH_CLIENT=10.11.10.250 58534 22
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+TMPDIR=/tmp
+LIBRARY_PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/lib:/mnt/lustre/cm/shared/global/src/dev/gcc/6.4.0/lib:/mnt/lustre/cm/shared/global/src/dev/gcc/6.4.0/lib64:/mnt/lustre/cm/shared/global/src/dev/gcc/5.4.0/lib:/mnt/lustre/cm/shared/global/src/dev/gcc/5.4.0/lib64:/mnt/lustre/cm/shared/global/src/dev/cudnn/7.4.2/lib64:/cm/local/apps/cuda/libs/current/lib64:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/lib64:/mnt/lustre/cm/shared/global/src/machinelearning/nccl/2.5.6-cuda10.0/lib
+CONDA_SHLVL=1
+CONDA_PROMPT_MODIFIER=(venv) 
+SSH_TTY=/dev/pts/255
+INCLUDE_PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/include:/mnt/lustre/cm/shared/global/src/dev/cudnn/7.4.2/include
+QT_GRAPHICSSYSTEM_CHECKED=1
+USER=USER
+SLURM_NNODES=1
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+LD_LIBRARY_PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/lib:/mnt/lustre/cm/shared/global/src/dev/gcc/6.4.0/lib:/mnt/lustre/cm/shared/global/src/dev/gcc/6.4.0/lib64:/mnt/lustre02/shanghai/sjcse/home/USER/:/mnt/lustre02/shanghai/sjcse/home/USER/:/mnt/lustre/cm/shared/global/src/dev/gcc/5.4.0/lib:/mnt/lustre/cm/shared/global/src/dev/gcc/5.4.0/lib64:/mnt/lustre/cm/shared/global/src/machinelearning/nccl/2.5.6-cuda10.0/lib:/mnt/lustre/cm/shared/global/src/dev/cudnn/7.4.2/lib64:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/extras/CUPTI/lib64:/cm/local/apps/cuda/libs/current/lib64:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/lib64:/mnt/lustre02/shanghai/sjcse/home/USER/:
+MPICH_USE_SHLIB=yes
+CONDA_EXE=/mnt/lustre/cm/shared/global/src/machinelearning/anaconda3/bin/conda
+SLURM_STEP_NUM_NODES=1
+CPATH=/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/include
+SRUN_DEBUG=3
+SLURM_JOBID=16642854
+CUDA_CACHE_DISABLE=1
+SLURM_NTASKS=1
+SLURM_LAUNCH_NODE_IPADDR=10.11.10.12
+TMUX=/tmp/tmux-98383886/default,56045,0
+SLURM_STEP_ID=0
+PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/bin:/mnt/lustre/cm/shared/global/src/dev/gcc/6.4.0/bin:/opt/MegaRAID/perccli:/opt/dell/srvadmin/sbin/:/opt/scm/bin:/opt/simplehpc/scm/bin:/mnt/lustre02/shanghai/sjcse/home/USER/.conda/envs/venv/bin:/mnt/lustre/cm/shared/global/src/machinelearning/anaconda3/bin:/mnt/lustre/cm/shared/global/src/dev/gcc/5.4.0/bin:/cm/local/apps/cuda/libs/current/bin:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/bin:/opt/MegaRAID/perccli:/opt/dell/srvadmin/sbin/:/opt/scm/bin:/opt/simplehpc/scm/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/mnt/lustre02/shanghai/sjcse/home/USER/.local/bin:/mnt/lustre02/shanghai/sjcse/home/USER/bin:/mnt/lustre02/shanghai/sjcse/home/USER/.local/bin:/mnt/lustre02/shanghai/sjcse/home/USER/bin
+MAIL=/var/spool/mail/USER
+SLURM_TASKS_PER_NODE=1
+SLURM_STEP_LAUNCHER_PORT=41823
+SLURM_WORKING_CLUSTER=slurm_cluster:mu01:6817:8192
+_=/usr/bin/env
+SLURM_JOB_ID=16642854
+LD_RUN_PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/lib:/cm/local/apps/cuda/libs/current/lib64
+C_INCLUDE_PATH=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/include:/mnt/lustre/cm/shared/global/src/dev/cudnn/7.4.2/include:/mnt/lustre/cm/shared/global/src/machinelearning/nccl/2.5.6-cuda10.0/include
+CONDA_PREFIX=/mnt/lustre02/shanghai/sjcse/home/USER/.conda/envs/venv
+SLURM_STEP_GPUS=0,1
+PWD=/mnt/lustre02/shanghai/sjcse/home/USER/Lab
+SLURM_STEPID=0
+SLURM_JOB_USER=USER
+_LMFILES_=/mnt/lustre/cm/shared/global/modulefiles/dev/cuda/10.1:/mnt/lustre/cm/shared/global/modulefiles/dev/cudnn/7.4.2:/mnt/lustre/cm/shared/global/modulefiles/machinelearning/nccl/2.5.6-cuda10.0:/mnt/lustre/cm/shared/global/modulefiles/dev/gcc/5.4.0:/mnt/lustre/cm/shared/global/modulefiles/machinelearning/anaconda/3:/mnt/lustre/cm/shared/global/modulefiles/dev/gcc/6.4.0:/mnt/lustre/cm/shared/global/modulefiles/misc/mpich/ge/gcc/64/3.2
+SLURM_SRUN_COMM_HOST=10.11.10.12
+CUDA_VISIBLE_DEVICES=0,1
+LANG=en_US.UTF-8
+MODULEPATH=/mnt/lustre/cm/shared/global/modulefiles/dev:/mnt/lustre/cm/shared/global/modulefiles/machinelearning:/mnt/lustre/cm/shared/global/modulefiles/misc:
+SLURM_UMASK=0027
+SLURM_PTY_WIN_COL=58
+LOADEDMODULES=cuda/10.1:cudnn/7.4.2:nccl/2.5.6-cuda10.0:gcc/5.4.0:anaconda/3:gcc/6.4.0:mpich/ge/gcc/64/3.2
+SLURM_JOB_UID=98383886
+TMUX_PANE=%0
+SLURM_NODEID=0
+P4_GLOBMEMSIZE=67108864
+SLURM_SUBMIT_DIR=/mnt/lustre02/shanghai/sjcse/home/USER/Lab/Sparse-Model-Zoo
+SLURM_NPROCS=1
+SLURM_TASK_PID=63504
+SLURM_DISTRIBUTION=cyclic
+SLURM_CPUS_ON_NODE=1
+HISTCONTROL=ignoredups
+SLURM_PROCID=0
+SLURM_JOB_NODELIST=gqxx-01-084
+SHLVL=4
+HOME=/mnt/lustre02/shanghai/sjcse/home/USER
+SLURM_PTY_PORT=40019
+SLURM_LOCALID=0
+SLURM_CLUSTER_NAME=slurm_cluster
+SLURM_JOB_CPUS_PER_NODE=1
+SLURM_JOB_GID=900001
+INCLUDEPATH=/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/extras/Debugger/include:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/extras/CUPTI/include:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/include/CL:/mnt/lustre/cm/shared/global/src/dev/cuda/10.1/include
+SLURM_SUBMIT_HOST=cu01
+SLURM_GTIDS=0
+SLURM_JOB_PARTITION=2080ti
+PYTHONPATH=/cm/local/apps/cuda/libs/current/pynvml
+LOGNAME=USER
+CONDA_PYTHON_EXE=/mnt/lustre/cm/shared/global/src/machinelearning/anaconda3/bin/python
+SLURM_STEP_NUM_TASKS=1
+SSH_CONNECTION=10.11.10.250 58534 10.11.10.12 22
+SLURM_JOB_ACCOUNT=acct-USER
+GPU_DEVICE_ORDINAL=0,1
+MODULESHOME=/usr/share/Modules
+SLURM_JOB_NUM_NODES=1
+MPI_HOME=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+CONDA_DEFAULT_ENV=venv
+PROMPT_COMMAND=RETRN_VAL=$?;logger -p local3.debug "$(whoami) [$remoteip] {$PWD} $(history 1 | sed "s/^[ ]*[0-9]\+[ ]*//" ) [$RETRN_VAL]"
+SLURM_STEP_TASKS_PER_NODE=1
+SLURM_STEP_NODELIST=gqxx-01-084
+XDG_RUNTIME_DIR=/run/user/98383886
+MPI_RUN=/mnt/lustre/cm/shared/global/src/misc/mpich/ge/gcc/64/3.2/bin/mpirun
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+}
+Linux gqxx-01-084 3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                24
+On-line CPU(s) list:   0-23
+Thread(s) per core:    1
+Core(s) per socket:    12
+Socket(s):             2
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 5118 CPU @ 2.30GHz
+Stepping:              4
+CPU MHz:               1000.000
+CPU max MHz:           2301.0000
+CPU min MHz:           1000.0000
+BogoMIPS:              4600.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              16896K
+NUMA node0 CPU(s):     0-23
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts
+MemTotal:       197280376 kB
+MemFree:        189980588 kB
+MemAvailable:   190316324 kB
+Buffers:               0 kB
+Cached:          1364476 kB
+SwapCached:            0 kB
+Active:           903040 kB
+Inactive:         601416 kB
+Active(anon):     518900 kB
+Inactive(anon):   186212 kB
+Active(file):     384140 kB
+Inactive(file):   415204 kB
+Unevictable:       10944 kB
+Mlocked:           10944 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                20 kB
+Writeback:             0 kB
+AnonPages:        150956 kB
+Mapped:            45228 kB
+Shmem:            562804 kB
+Slab:            3468888 kB
+SReclaimable:     587380 kB
+SUnreclaim:      2881508 kB
+KernelStack:       14352 kB
+PageTables:         7176 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    98640188 kB
+Committed_AS:    2770280 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:     1322208 kB
+VmallocChunk:   34358220764 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     26624 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:    44066052 kB
+DirectMap2M:    153493504 kB
+DirectMap1G:     3145728 kB
+NAME                            MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+sda                               8:0    0 223.6G  0 disk  
+├─md126                           9:126  0 212.4G  0 raid1 
+│ ├─md126p1                     259:0    0     1G  0 md    /boot
+│ └─md126p2                     259:1    0 211.4G  0 md    
+│   ├─centos_gqxx--01--084-root 253:0    0    50G  0 lvm   /
+│   ├─centos_gqxx--01--084-swap 253:1    0     4G  0 lvm   
+│   └─centos_gqxx--01--084-home 253:2    0 157.4G  0 lvm   /home
+└─md127                           9:127  0         0 md    
+sdb                               8:16   0 223.6G  0 disk  
+├─md126                           9:126  0 212.4G  0 raid1 
+│ ├─md126p1                     259:0    0     1G  0 md    /boot
+│ └─md126p2                     259:1    0 211.4G  0 md    
+│   ├─centos_gqxx--01--084-root 253:0    0    50G  0 lvm   /
+│   ├─centos_gqxx--01--084-swap 253:1    0     4G  0 lvm   
+│   └─centos_gqxx--01--084-home 253:2    0 157.4G  0 lvm   /home
+└─md127                           9:127  0         0 md    
+[2:0:0:0]    disk    ATA      INTEL SSDSC2KB24 0100  /dev/sda    240GB
+[3:0:0:0]    disk    ATA      INTEL SSDSC2KB24 0100  /dev/sdb    240GB
+Sun Apr 19 16:04:40 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.56       Driver Version: 418.56       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  On   | 00000000:1A:00.0 Off |                  N/A |
+| 18%   30C    P8    15W / 250W |     11MiB / 10989MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  GeForce RTX 208...  On   | 00000000:1B:00.0 Off |                  N/A |
+| 18%   32C    P8    17W / 250W |     11MiB / 10989MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+00:00.0 Host bridge: Intel Corporation Device 2020 (rev 04)
+00:04.0 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.1 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.2 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.3 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.4 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.5 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.6 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:04.7 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+00:05.0 System peripheral: Intel Corporation Sky Lake-E MM/Vt-d Configuration Registers (rev 04)
+00:05.2 System peripheral: Intel Corporation Device 2025 (rev 04)
+00:05.4 PIC: Intel Corporation Device 2026 (rev 04)
+00:08.0 System peripheral: Intel Corporation Sky Lake-E Ubox Registers (rev 04)
+00:08.1 Performance counters: Intel Corporation Sky Lake-E Ubox Registers (rev 04)
+00:08.2 System peripheral: Intel Corporation Sky Lake-E Ubox Registers (rev 04)
+00:11.0 Unassigned class [ff00]: Intel Corporation Device a1ec (rev 09)
+00:11.1 Unassigned class [ff00]: Intel Corporation Device a1ed (rev 09)
+00:11.5 SATA controller: Intel Corporation Lewisburg SSATA Controller [AHCI mode] (rev 09)
+00:14.0 USB controller: Intel Corporation Lewisburg USB 3.0 xHCI Controller (rev 09)
+00:14.2 Signal processing controller: Intel Corporation Device a1b1 (rev 09)
+00:16.0 Communication controller: Intel Corporation Lewisburg CSME: HECI #1 (rev 09)
+00:16.1 Communication controller: Intel Corporation Lewisburg CSME: HECI #2 (rev 09)
+00:16.4 Communication controller: Intel Corporation Lewisburg CSME: HECI #3 (rev 09)
+00:17.0 RAID bus controller: Intel Corporation C600/X79 series chipset SATA RAID Controller (rev 09)
+00:1c.0 PCI bridge: Intel Corporation Lewisburg PCI Express Root Port #1 (rev f9)
+00:1c.5 PCI bridge: Intel Corporation Lewisburg PCI Express Root Port #6 (rev f9)
+00:1f.0 ISA bridge: Intel Corporation Lewisburg LPC Controller (rev 09)
+00:1f.2 Memory controller: Intel Corporation Lewisburg PMC (rev 09)
+00:1f.4 SMBus: Intel Corporation Lewisburg SMBus (rev 09)
+00:1f.5 Serial bus controller [0c80]: Intel Corporation Lewisburg SPI Controller (rev 09)
+02:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 04)
+03:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)
+17:00.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port A (rev 04)
+17:05.0 System peripheral: Intel Corporation Device 2034 (rev 04)
+17:05.2 System peripheral: Intel Corporation Sky Lake-E RAS Configuration Registers (rev 04)
+17:05.4 PIC: Intel Corporation Device 2036 (rev 04)
+17:08.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:08.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:09.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0a.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0a.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0e.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:0f.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:10.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:10.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:1d.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:1d.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:1d.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:1d.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+17:1e.0 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+17:1e.1 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+17:1e.2 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+17:1e.3 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+17:1e.4 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+17:1e.5 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+17:1e.6 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+18:00.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+19:08.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+19:10.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+1a:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+1a:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+1a:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+1a:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+1b:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+1b:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+1b:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+1b:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+3a:00.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port A (rev 04)
+3a:05.0 System peripheral: Intel Corporation Device 2034 (rev 04)
+3a:05.2 System peripheral: Intel Corporation Sky Lake-E RAS Configuration Registers (rev 04)
+3a:05.4 PIC: Intel Corporation Device 2036 (rev 04)
+3a:08.0 System peripheral: Intel Corporation Device 2066 (rev 04)
+3a:09.0 System peripheral: Intel Corporation Device 2066 (rev 04)
+3a:0a.0 System peripheral: Intel Corporation Device 2040 (rev 04)
+3a:0a.1 System peripheral: Intel Corporation Device 2041 (rev 04)
+3a:0a.2 System peripheral: Intel Corporation Device 2042 (rev 04)
+3a:0a.3 System peripheral: Intel Corporation Device 2043 (rev 04)
+3a:0a.4 System peripheral: Intel Corporation Device 2044 (rev 04)
+3a:0a.5 System peripheral: Intel Corporation Device 2045 (rev 04)
+3a:0a.6 System peripheral: Intel Corporation Device 2046 (rev 04)
+3a:0a.7 System peripheral: Intel Corporation Device 2047 (rev 04)
+3a:0b.0 System peripheral: Intel Corporation Device 2048 (rev 04)
+3a:0b.1 System peripheral: Intel Corporation Device 2049 (rev 04)
+3a:0b.2 System peripheral: Intel Corporation Device 204a (rev 04)
+3a:0b.3 System peripheral: Intel Corporation Device 204b (rev 04)
+3a:0c.0 System peripheral: Intel Corporation Device 2040 (rev 04)
+3a:0c.1 System peripheral: Intel Corporation Device 2041 (rev 04)
+3a:0c.2 System peripheral: Intel Corporation Device 2042 (rev 04)
+3a:0c.3 System peripheral: Intel Corporation Device 2043 (rev 04)
+3a:0c.4 System peripheral: Intel Corporation Device 2044 (rev 04)
+3a:0c.5 System peripheral: Intel Corporation Device 2045 (rev 04)
+3a:0c.6 System peripheral: Intel Corporation Device 2046 (rev 04)
+3a:0c.7 System peripheral: Intel Corporation Device 2047 (rev 04)
+3a:0d.0 System peripheral: Intel Corporation Device 2048 (rev 04)
+3a:0d.1 System peripheral: Intel Corporation Device 2049 (rev 04)
+3a:0d.2 System peripheral: Intel Corporation Device 204a (rev 04)
+3a:0d.3 System peripheral: Intel Corporation Device 204b (rev 04)
+3b:00.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+3c:08.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+3c:10.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+3d:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+3d:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+3d:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+3d:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+3e:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+3e:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+3e:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+3e:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+5d:02.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port C (rev 04)
+5d:05.0 System peripheral: Intel Corporation Device 2034 (rev 04)
+5d:05.2 System peripheral: Intel Corporation Sky Lake-E RAS Configuration Registers (rev 04)
+5d:05.4 PIC: Intel Corporation Device 2036 (rev 04)
+5d:0e.0 Performance counters: Intel Corporation Device 2058 (rev 04)
+5d:0e.1 System peripheral: Intel Corporation Device 2059 (rev 04)
+5d:0f.0 Performance counters: Intel Corporation Device 2058 (rev 04)
+5d:0f.1 System peripheral: Intel Corporation Device 2059 (rev 04)
+5d:12.0 Performance counters: Intel Corporation Sky Lake-E M3KTI Registers (rev 04)
+5d:12.1 Performance counters: Intel Corporation Sky Lake-E M3KTI Registers (rev 04)
+5d:12.2 System peripheral: Intel Corporation Sky Lake-E M3KTI Registers (rev 04)
+5d:15.0 System peripheral: Intel Corporation Sky Lake-E M2PCI Registers (rev 04)
+5d:16.0 System peripheral: Intel Corporation Sky Lake-E M2PCI Registers (rev 04)
+5d:16.4 System peripheral: Intel Corporation Sky Lake-E M2PCI Registers (rev 04)
+5e:00.0 PCI bridge: Intel Corporation Device 37c0 (rev 09)
+5f:03.0 PCI bridge: Intel Corporation Device 37c5 (rev 09)
+60:00.0 Ethernet controller: Intel Corporation Ethernet Connection X722 for 10GBASE-T (rev 09)
+60:00.1 Ethernet controller: Intel Corporation Ethernet Connection X722 for 10GBASE-T (rev 09)
+80:04.0 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.1 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.2 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.3 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.4 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.5 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.6 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:04.7 System peripheral: Intel Corporation Sky Lake-E CBDMA Registers (rev 04)
+80:05.0 System peripheral: Intel Corporation Sky Lake-E MM/Vt-d Configuration Registers (rev 04)
+80:05.2 System peripheral: Intel Corporation Device 2025 (rev 04)
+80:05.4 PIC: Intel Corporation Device 2026 (rev 04)
+80:08.0 System peripheral: Intel Corporation Sky Lake-E Ubox Registers (rev 04)
+80:08.1 Performance counters: Intel Corporation Sky Lake-E Ubox Registers (rev 04)
+80:08.2 System peripheral: Intel Corporation Sky Lake-E Ubox Registers (rev 04)
+85:00.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port A (rev 04)
+85:05.0 System peripheral: Intel Corporation Device 2034 (rev 04)
+85:05.2 System peripheral: Intel Corporation Sky Lake-E RAS Configuration Registers (rev 04)
+85:05.4 PIC: Intel Corporation Device 2036 (rev 04)
+85:08.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:08.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:09.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0a.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0a.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0e.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.4 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.5 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.6 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:0f.7 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:10.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:10.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:1d.0 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:1d.1 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:1d.2 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:1d.3 System peripheral: Intel Corporation Sky Lake-E CHA Registers (rev 04)
+85:1e.0 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+85:1e.1 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+85:1e.2 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+85:1e.3 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+85:1e.4 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+85:1e.5 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+85:1e.6 System peripheral: Intel Corporation Sky Lake-E PCU Registers (rev 04)
+86:00.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+87:08.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+87:10.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+88:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+88:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+88:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+88:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+89:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+89:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+89:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+89:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+ae:00.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port A (rev 04)
+ae:05.0 System peripheral: Intel Corporation Device 2034 (rev 04)
+ae:05.2 System peripheral: Intel Corporation Sky Lake-E RAS Configuration Registers (rev 04)
+ae:05.4 PIC: Intel Corporation Device 2036 (rev 04)
+ae:08.0 System peripheral: Intel Corporation Device 2066 (rev 04)
+ae:09.0 System peripheral: Intel Corporation Device 2066 (rev 04)
+ae:0a.0 System peripheral: Intel Corporation Device 2040 (rev 04)
+ae:0a.1 System peripheral: Intel Corporation Device 2041 (rev 04)
+ae:0a.2 System peripheral: Intel Corporation Device 2042 (rev 04)
+ae:0a.3 System peripheral: Intel Corporation Device 2043 (rev 04)
+ae:0a.4 System peripheral: Intel Corporation Device 2044 (rev 04)
+ae:0a.5 System peripheral: Intel Corporation Device 2045 (rev 04)
+ae:0a.6 System peripheral: Intel Corporation Device 2046 (rev 04)
+ae:0a.7 System peripheral: Intel Corporation Device 2047 (rev 04)
+ae:0b.0 System peripheral: Intel Corporation Device 2048 (rev 04)
+ae:0b.1 System peripheral: Intel Corporation Device 2049 (rev 04)
+ae:0b.2 System peripheral: Intel Corporation Device 204a (rev 04)
+ae:0b.3 System peripheral: Intel Corporation Device 204b (rev 04)
+ae:0c.0 System peripheral: Intel Corporation Device 2040 (rev 04)
+ae:0c.1 System peripheral: Intel Corporation Device 2041 (rev 04)
+ae:0c.2 System peripheral: Intel Corporation Device 2042 (rev 04)
+ae:0c.3 System peripheral: Intel Corporation Device 2043 (rev 04)
+ae:0c.4 System peripheral: Intel Corporation Device 2044 (rev 04)
+ae:0c.5 System peripheral: Intel Corporation Device 2045 (rev 04)
+ae:0c.6 System peripheral: Intel Corporation Device 2046 (rev 04)
+ae:0c.7 System peripheral: Intel Corporation Device 2047 (rev 04)
+ae:0d.0 System peripheral: Intel Corporation Device 2048 (rev 04)
+ae:0d.1 System peripheral: Intel Corporation Device 2049 (rev 04)
+ae:0d.2 System peripheral: Intel Corporation Device 204a (rev 04)
+ae:0d.3 System peripheral: Intel Corporation Device 204b (rev 04)
+af:00.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+b0:08.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+b0:10.0 PCI bridge: PLX Technology, Inc. PEX 8747 48-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch (rev ca)
+b1:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+b1:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+b1:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+b1:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+b2:00.0 VGA compatible controller: NVIDIA Corporation Device 1e07 (rev a1)
+b2:00.1 Audio device: NVIDIA Corporation Device 10f7 (rev a1)
+b2:00.2 USB controller: NVIDIA Corporation Device 1ad6 (rev a1)
+b2:00.3 Serial bus controller [0c80]: NVIDIA Corporation Device 1ad7 (rev a1)
+d7:00.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port A (rev 04)
+d7:01.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port B (rev 04)
+d7:02.0 PCI bridge: Intel Corporation Sky Lake-E PCI Express Root Port C (rev 04)
+d7:05.0 System peripheral: Intel Corporation Device 2034 (rev 04)
+d7:05.2 System peripheral: Intel Corporation Sky Lake-E RAS Configuration Registers (rev 04)
+d7:05.4 PIC: Intel Corporation Device 2036 (rev 04)
+d7:0e.0 Performance counters: Intel Corporation Device 2058 (rev 04)
+d7:0e.1 System peripheral: Intel Corporation Device 2059 (rev 04)
+d7:0f.0 Performance counters: Intel Corporation Device 2058 (rev 04)
+d7:0f.1 System peripheral: Intel Corporation Device 2059 (rev 04)
+d7:12.0 Performance counters: Intel Corporation Sky Lake-E M3KTI Registers (rev 04)
+d7:12.1 Performance counters: Intel Corporation Sky Lake-E M3KTI Registers (rev 04)
+d7:12.2 System peripheral: Intel Corporation Sky Lake-E M3KTI Registers (rev 04)
+d7:15.0 System peripheral: Intel Corporation Sky Lake-E M2PCI Registers (rev 04)
+d7:16.0 System peripheral: Intel Corporation Sky Lake-E M2PCI Registers (rev 04)
+d7:16.4 System peripheral: Intel Corporation Sky Lake-E M2PCI Registers (rev 04)
+da:00.0 Infiniband controller: Mellanox Technologies MT27800 Family [ConnectX-5]

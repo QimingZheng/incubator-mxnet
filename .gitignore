@@ -86,6 +86,7 @@ R-package/R/mxnet_generated.R
 *ubyte
 *.bin
 *.txt
+!TestbedInfo.txt
 !CMakeLists.txt
 
 # ipython notebook
